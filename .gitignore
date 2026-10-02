@@ -1,0 +1,7 @@
+.ipynb_checkpoints/
+outputs/
+__pycache__/
+*.py[cod]
+*.pt
+*.pth
+.DS_Store
