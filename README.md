@@ -16,7 +16,7 @@ ESMC-OTG predicts whether a threonine in a human protein is an O-linked glycosyl
 - [Interpretability](#interpretability)
 - [Training settings](#training-settings)
 - [Running the code](#running-the-code)
-- [Repository structure](#repository-structure)
+
 
 ## Model
 
