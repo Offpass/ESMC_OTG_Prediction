@@ -1,0 +1,5 @@
+model,test_set,positive,negative,MCC,ACC,SEN,SPE,source
+ESMC-OTG,balanced_benchmark,200,200,0.832,0.915,0.880,0.950,manuscript Table 1
+DeepO-GlyThr,balanced_benchmark,200,200,0.800,0.900,0.885,0.915,authors' released checkpoint (commit 8e94f09) run on the same test windows; threshold 0.5
+ESMC-OTG,imbalanced_test,182,991,0.695,0.905,0.868,0.912,manuscript Table 2
+DeepO-GlyThr,imbalanced_test,182,991,0.643,0.880,0.874,0.881,authors' released checkpoint (commit 8e94f09) run on the same test windows; threshold 0.5
