@@ -136,19 +136,4 @@ jupyter notebook ESMC_OTG.ipynb
 
 Install a PyTorch build that matches your CUDA driver. An NVIDIA GPU is recommended; the frozen-embedding model trains in under a minute per seed on a modern GPU once embeddings are extracted. Set `OTG_DATA_DIR` to use data stored outside the repository. Results are written to `outputs/esmc_otg/results.json`.
 
-## Repository structure
 
-```text
-ESMC_OTG_Prediction/
-├── ESMC_OTG.ipynb                 main notebook: data, embeddings, training, evaluation
-├── requirements.txt
-├── data/                          training, balanced and imbalanced test sets
-├── figures/
-│   ├── pipeline.png               model overview
-│   ├── amino_acid_landscape.*     residue composition and enrichment
-│   └── representation_tsne.*      t-SNE of raw, contextual, local and fused features
-├── notebooks/ablations/           ESM-C only, dual branch without Mixup/SWA, fine-tuned ESM-C
-└── results/
-    ├── main_metrics.csv           seven-seed mean and standard deviation
-    └── deepoglythr_comparison.csv same-sample comparison with DeepO-GlyThr
-```
