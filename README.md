@@ -17,7 +17,6 @@ ESMC-OTG predicts whether a threonine in a human protein is an O-linked glycosyl
 - [Training settings](#training-settings)
 - [Running the code](#running-the-code)
 - [Repository structure](#repository-structure)
-- [Citation](#citation)
 
 ## Model
 
@@ -72,17 +71,6 @@ Values reported in the manuscript (threshold 0.5).
 | NetOGlyc-4.0 (Steentoft et al., 2013) | 0.535 | 0.828 | 0.810 | 0.831 |
 
 † Measured by running the authors' released [DeepO-GlyThr](https://github.com/TangQiang0701/DeepO-GlyThr) model (commit `8e94f09`) with its own encoder on exactly the same test windows ([`results/deepoglythr_comparison.csv`](results/deepoglythr_comparison.csv)). Other comparator values are quoted from their publications.
-
-### Seven-seed summary
-
-Running [`ESMC_OTG.ipynb`](ESMC_OTG.ipynb) trains all seven seeds and reports the mean ± standard deviation of the seed ensembles, saved in [`results/main_metrics.csv`](results/main_metrics.csv):
-
-| Test set | MCC | Accuracy | Sensitivity | Specificity |
-|---|---:|---:|---:|---:|
-| Balanced test | 0.818 ± 0.011 | 0.908 ± 0.005 | 0.877 ± 0.015 | 0.939 ± 0.020 |
-| Imbalanced test | 0.691 ± 0.027 | 0.903 ± 0.014 | 0.865 ± 0.017 | 0.910 ± 0.019 |
-
-Exact values vary slightly between runs because of GPU non-determinism and library versions.
 
 ### Ablation (imbalanced test)
 
@@ -164,13 +152,3 @@ ESMC_OTG_Prediction/
     ├── main_metrics.csv           seven-seed mean and standard deviation
     └── deepoglythr_comparison.csv same-sample comparison with DeepO-GlyThr
 ```
-
-## Citation
-
-Alblooshi M. S., Abbas Z., and Rehman M. U. ESMC-OTG: Protein Language Model-Guided Multi-Scale Deep Learning for Identification of Human O-Linked Threonine Glycosylation Sites. *Frontiers in Cell and Developmental Biology* (under review).
-
-The benchmark dataset is from Tang H., Tang Q., Zhang Q., and Feng P. O-GlyThr: prediction of human O-linked threonine glycosites using multi-feature fusion. *International Journal of Biological Macromolecules* 242, 124761 (2023).
-
-## Contact
-
-Mobeen Ur Rehman (corresponding author), United Arab Emirates University: mobeen.rehman@uaeu.ac.ae
